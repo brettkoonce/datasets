@@ -374,7 +374,7 @@ class SplitReadInstruction(object):
   def __add__(self, other):
     """Merging split together."""
     # Will raise error if a split has already be added (NonMutableDict)
-    # TODO(epot): If a split is already added but there is no overlap between
+    # TODO(epot): If a split is already added but there is no overlapp between
     # the slices, should merge the slices (ex: [:10] + [80:])
     split_instruction = SplitReadInstruction()
     split_instruction._splits.update(self._splits)   # pylint: disable=protected-access
